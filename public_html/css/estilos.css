@@ -1,0 +1,326 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para filas */
+.row
+{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para pie de página */
+footer
+{
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilos para el logo */
+#logo
+{
+    max-width: 100%;
+    height: auto;
+}
+
+#logo img
+{
+    width: 50px;
+    height: 50px;
+}
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 5px;
+}
+
+nav
+{
+    position: relative;
+    right: 0;
+    padding: 10px;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a
+{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.fondoHeader
+{
+    background-color: #333;
+    box-shadow: 0px 0px 10px 10px red;
+}
+
+nav a .cajaImg
+{
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.3s;
+}
+
+nav a:nth-child(1) .cajaImg
+{
+    background-image: url(../imagenes/ancla/casaNaranja.png);
+    transition: background-image 0.3s;
+    transition-delay: 0.1s;
+}
+nav a:nth-child(2) .cajaImg
+{
+    background-image: url(../imagenes/ancla/productosNaranja.png);
+    transition: background-image 0.3s;
+    transition-delay: 0.1s;
+}
+nav a:nth-child(3) .cajaImg
+{
+    background-image: url(../imagenes/ancla/contactoNaranja.png);
+    transition: background-image 0.3s;
+    transition-delay: 0.1s;
+}
+nav a:nth-child(1):hover .cajaImg
+{
+    background-image: url(../imagenes/ancla/casaClaro.png);
+    transition: background-image 0.3s;
+    transition-delay: 0s;
+}
+nav a:nth-child(2):hover .cajaImg
+{
+    background-image: url(../imagenes/ancla/productosClaro.png);
+    transition: background-image 0.3s;
+    transition-delay: 0s;
+}
+nav a:nth-child(3):hover .cajaImg
+{
+    background-image: url(../imagenes/ancla/contactoClaro.png);
+    transition: background-image 0.3s;
+    transition-delay: 0s;
+}
+
+.fondoMain
+{
+    background-color: #878787;
+}
+
+article {
+    background-color: #616161;
+    padding: 20px;
+}
+
+article h1 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+article h2
+{
+    font-family: 'titulos';
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+article h3 {
+    font-family: 'parrafos';
+    font-size: 1.5em;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1.2em;
+    color: white;
+    line-height: 1.5em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #616161;
+}
+.main {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-color: #616161;
+}
+
+.caja {
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+    transition: transform 0.3s;
+    border-radius: 20px;
+}
+
+.caja h2
+{
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+a .caja .aux
+{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a .caja .aux .cajaImg
+{
+    width: 170px;
+    height: 170px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.3s;
+}
+
+a:nth-child(1) .caja .aux .cajaImg
+{
+    background-image: url(../imagenes/ancla/presupuestoOscuro.png);
+    transition: background-image 0.3s;
+    transition-delay: 0.1s;
+}
+a:nth-child(2) .caja .aux .cajaImg
+{
+    background-image: url(../imagenes/ancla/dineroProductoOscuro.png);
+    transition: background-image 0.3s;
+    transition-delay: 0.1s;
+}
+
+a:nth-child(1) .caja:hover .aux .cajaImg
+{
+    background-image: url(../imagenes/ancla/presupuestoColor.png);
+    transition: background-image 0.3s;
+    transition-delay: 0.1s;
+}
+a:nth-child(2) .caja:hover .aux .cajaImg
+{
+    background-image: url(../imagenes/ancla/dineroProductoColor.png);
+    transition: background-image 0.3s;
+    transition-delay: 0.1s;
+}
+
+.caja:hover {
+    transform: translateY(-20px);
+}
+
+a
+{
+    font-family: 'titulos';
+    text-decoration: none;
+    color: black;
+}
+
+a:nth-child(1) .caja
+{
+    background-color: #ffb700;
+}
+a:nth-child(2) .caja
+{
+    background-color: #00d9ff;
+}
+
+.contenedor
+{
+    display: flex;
+}
+
+footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+ul li a .cajaImg
+{   
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.3s;
+}
+
+ul li:nth-child(1) a .cajaImg
+{
+    background-image: url(../imagenes/ancla/instagramClaro.png);
+    transition: background-image 0.3s;
+    transition-delay: 0.1s;
+}
+ul li:nth-child(2) a .cajaImg
+{
+    background-image: url(../imagenes/ancla/twitterClaro.png);
+    transition: background-image 0.3s;
+    transition-delay: 0.1s;
+}
+ul li:nth-child(3) a .cajaImg
+{
+    background-image: url(../imagenes/ancla/facebookClaro.png);
+    transition: background-image 0.3s;
+    transition-delay: 0.1s;
+}
+
+.fondoFooter {
+    background-color: #333;
+    color: #fff;
+}
+
+.fondoFooter h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.fondoFooter p {
+    margin-left: 50px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+.redesSociales {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.redesSociales li {
+    margin-right: 20px;
+}
+
+.redesSociales li:last-child {
+    margin-right: 0;
+}
+
+@font-face {
+    font-family: 'titulos';
+    src: url('../tipos_de_letra/MelodySouthern.otf');
+}
+@font-face {
+    font-family: 'parrafos';
+    src: url('../tipos_de_letra/coolvetica_rg.otf');
+}
