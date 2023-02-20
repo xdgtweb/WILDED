@@ -103,7 +103,7 @@
             const chartCtx = document.getElementById("chart").getContext("2d");
             let myChart;
 
-            // Función para actualizar el gráfico y guardar los datos en sessionStorage
+            // Función para actualizar el gráfico y guardar los datos en localStorage
             function updateChart() {
                 const income = parseFloat(incomeInput.value);
                 const water = parseFloat(waterInput.value);
@@ -115,14 +115,14 @@
                 const garbage = parseFloat(garbageInput.value);
 
                 if (!isNaN(income) && !isNaN(water) && !isNaN(food) && !isNaN(electricity) && !isNaN(mortgage) && !isNaN(parking) && !isNaN(car) && !isNaN(garbage)) {
-                    const savedIncome = sessionStorage.getItem("income");
-                    const savedWater = sessionStorage.getItem("water");
-                    const savedFood = sessionStorage.getItem("food");
-                    const savedElectricity = sessionStorage.getItem("electricity");
-                    const savedMortgage = sessionStorage.getItem("mortgage");
-                    const savedParking = sessionStorage.getItem("parking");
-                    const savedCar = sessionStorage.getItem("car");
-                    const savedGarbage = sessionStorage.getItem("garbage");
+                    const savedIncome = localStorage.getItem("income");
+                    const savedWater = localStorage.getItem("water");
+                    const savedFood = localStorage.getItem("food");
+                    const savedElectricity = localStorage.getItem("electricity");
+                    const savedMortgage = localStorage.getItem("mortgage");
+                    const savedParking = localStorage.getItem("parking");
+                    const savedCar = localStorage.getItem("car");
+                    const savedGarbage = localStorage.getItem("garbage");
 
                     const newIncome = (savedIncome ? parseFloat(savedIncome) : 0) + income;
                     const newWater = (savedWater ? parseFloat(savedWater) : 0) + water;
@@ -143,6 +143,7 @@
 
                     const options = {
                         legend: {
+
                             labels: {
                                 fontColor: 'white'
                             }
@@ -173,14 +174,14 @@
                         options: options
                     });
 
-                    sessionStorage.setItem("income", newIncome);
-                    sessionStorage.setItem("water", newWater);
-                    sessionStorage.setItem("food", newFood);
-                    sessionStorage.setItem("electricity", newElectricity);
-                    sessionStorage.setItem("mortgage", newMortgage);
-                    sessionStorage.setItem("parking", newParking);
-                    sessionStorage.setItem("car", newCar);
-                    sessionStorage.setItem("garbage", newGarbage);
+                    localStorage.setItem("income", newIncome);
+                    localStorage.setItem("water", newWater);
+                    localStorage.setItem("food", newFood);
+                    localStorage.setItem("electricity", newElectricity);
+                    localStorage.setItem("mortgage", newMortgage);
+                    localStorage.setItem("parking", newParking);
+                    localStorage.setItem("car", newCar);
+                    localStorage.setItem("garbage", newGarbage);
                 }
             }
 
@@ -200,19 +201,30 @@
                 if (myChart) {
                     myChart.destroy();
                 }
-                sessionStorage.clear();
+                localStorage.clear();
+            });
+
+            window.addEventListener("load", function (event) {
+                incomeInput.value = "";
+                waterInput.value = "";
+                foodInput.value = "";
+                electricityInput.value = "";
+                mortgageInput.value = "";
+                parkingInput.value = "";
+                carInput.value = "";
+                garbageInput.value = "";
             });
 
             // Cargar gráfico al cargar la página
             window.onload = () => {
-                const savedIncome = sessionStorage.getItem("income");
-                const savedWater = sessionStorage.getItem("water");
-                const savedFood = sessionStorage.getItem("food");
-                const savedElectricity = sessionStorage.getItem("electricity");
-                const savedMortgage = sessionStorage.getItem("mortgage");
-                const savedParking = sessionStorage.getItem("parking");
-                const savedCar = sessionStorage.getItem("car");
-                const savedGarbage = sessionStorage.getItem("garbage");
+                const savedIncome = localStorage.getItem("income");
+                const savedWater = localStorage.getItem("water");
+                const savedFood = localStorage.getItem("food");
+                const savedElectricity = localStorage.getItem("electricity");
+                const savedMortgage = localStorage.getItem("mortgage");
+                const savedParking = localStorage.getItem("parking");
+                const savedCar = localStorage.getItem("car");
+                const savedGarbage = localStorage.getItem("garbage");
 
                 if (savedIncome || savedWater || savedFood || savedElectricity || savedMortgage || savedParking || savedCar || savedGarbage) {
                     const income = savedIncome ? parseFloat(savedIncome) : 0;
@@ -248,6 +260,7 @@
                 }
             };
         </script>
+
 
     </body>
 </html>
