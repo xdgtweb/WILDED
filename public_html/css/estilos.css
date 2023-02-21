@@ -22,12 +22,16 @@ footer
 /* Estilos para el logo */
 #logo
 {
-    max-width: 100%;
-    height: auto;
+    border-radius: 10px;
+    width: 38px;
+    height: 38px;
+    transition: 0.3s;
+    transition-duration: 1s;
 }
 
 .logoLabel
 {
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +40,7 @@ footer
 .logoLabel:hover #logo
 {
     background-color: #ff0033;
-    
+    transition: 0.1s;
 }
 
 
@@ -44,13 +48,13 @@ header label
 {
     color: white;
     font-size: 25px;
-    margin-left: 5px;
+    margin-left: 8px;
 }
 
 #logo img
 {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 header
 {
@@ -136,10 +140,9 @@ nav a:nth-child(3):hover .cajaImg
 
 article .centrado
 {
-    display: inline-block;
-    position: relative;
-    left: 100px;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 article {
@@ -163,9 +166,11 @@ article h2
 
 article h3 {
     font-family: 'parrafos';
-    font-size: 1.5em;
+    font-size: 18px;
+    line-height: 1.5em;
+    letter-spacing: 1.3px;
+    font-weight: 100;
     color: white;
-    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -186,13 +191,24 @@ article label
     display: inline-block;
 }
 
-article p {
-    font-size: 1.2em;
+article p
+{
+    font-size: 20px;
     color: white;
-    line-height: 1.5em;
     font-family: 'parrafos';
     letter-spacing: 1.3px;
+    font-weight: 100;
     margin-left: 50px;
+}
+
+article h6
+{
+    font-size: 18px;
+    color: white;
+    line-height: 1.5em;
+    letter-spacing: 1.3px;
+    font-family: 'parrafos';
+    font-weight: 100;
 }
 
 article h4
@@ -200,9 +216,10 @@ article h4
     color: white;
     font-family: 'parrafos';
     letter-spacing: 1.2px;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 300;
     margin-bottom: 30px;
+    line-height: 1.5em;
 }
 
 article h5
@@ -255,7 +272,7 @@ main input:focus, article input:focus
     border: 3px green solid;
 }
 
-main button, article button
+main button
 {
     border-radius: 20px;
     width: 80px;
@@ -264,6 +281,18 @@ main button, article button
     font-size: 17px;
     margin-top: 10px;
     font-family: 'parrafos';
+}
+
+article button
+{
+    border-radius: 20px;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 10px;
+    font-family: 'parrafos';
+    cursor: pointer;
 }
 
 main #clear-btn
@@ -515,6 +544,51 @@ ul li:nth-child(3):hover a .cajaImg
     footer {
         flex-direction: column;
         text-align: center;
+    }
+
+    article div
+    {
+        display: grid;
+
+    }
+
+    article p
+    {
+        font-size: 20px;
+        color: white;
+        font-family: 'parrafos';
+        letter-spacing: 1.3px;
+        font-weight: 100;
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+
+    form
+    {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    article .centrado
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    article input
+    {
+        width: 30%;
+        margin: auto;
+    }
+
+    article label
+    {
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 }
 
