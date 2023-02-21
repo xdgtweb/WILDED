@@ -33,10 +33,18 @@ footer
     align-items: center;
 }
 
+.logoLabel:hover #logo
+{
+    background-color: #ff0033;
+    
+}
+
+
 header label
 {
     color: white;
     font-size: 25px;
+    margin-left: 5px;
 }
 
 #logo img
@@ -86,19 +94,19 @@ nav a .cajaImg
 
 nav a:nth-child(1) .cajaImg
 {
-    background-image: url(../imagenes/ancla/grupoNaranja.png);
+    background-image: url(../imagenes/ancla/grupoAzul.png);
     transition: background-image 0.3s;
     transition-delay: 0.1s;
 }
 nav a:nth-child(2) .cajaImg
 {
-    background-image: url(../imagenes/ancla/productosNaranja.png);
+    background-image: url(../imagenes/ancla/productosAzul.png);
     transition: background-image 0.3s;
     transition-delay: 0.1s;
 }
 nav a:nth-child(3) .cajaImg
 {
-    background-image: url(../imagenes/ancla/contactoNaranja.png);
+    background-image: url(../imagenes/ancla/contactoAzul.png);
     transition: background-image 0.3s;
     transition-delay: 0.1s;
 }
@@ -264,6 +272,7 @@ main #clear-btn
     left: 500px;
 }
 
+
 .main {
     display: inline-block;
     justify-content: center;
@@ -343,24 +352,30 @@ a
     color: black;
 }
 
+a .caja
+{
+    border-left: 4px black solid;
+    border-top: 4px black solid;
+}
+
 a:nth-child(1) .caja
 {
-    background-color: #ffa524;
+    background-color: #00cccc;
     transition: 0.4s;
 }
 a:nth-child(2) .caja
 {
-    background-color: #ffa524;
+    background-color: #00cccc;
     transition: 0.4s;
 }
 a:nth-child(1):hover .caja
 {
-    background-color: #24edff;
+    background-color: #ff0033;
     transition: 0.4s;
 }
 a:nth-child(2):hover .caja
 {
-    background-color: #24edff;
+    background-color: #ff0033;
     transition: 0.4s;
 }
 
@@ -469,6 +484,21 @@ ul li:nth-child(3):hover a .cajaImg
 
 .redesSociales li:last-child {
     margin-right: 0;
+}
+
+.gmail
+{
+    text-align: center;
+    display: block;
+}
+
+.gmail a
+{
+    font-family: 'parrafos';
+    text-decoration: none;
+    color: #00cccc;
+    font-size: 20px;
+    letter-spacing: 1.2px;
 }
 
 @media screen and (max-width: 768px) {

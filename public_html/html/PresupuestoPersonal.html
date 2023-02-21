@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="../css/PresupuestoPersonal.css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.bundle.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="main.js"></script>
     </head>
     <body>
         <div class="col-12">
@@ -35,32 +34,33 @@
                         <h2>Presupuesto Personal</h2>
                     </article>
                 </aside>
-                <main>
-                    <div>
-                        <label for="income">Ingreso Mensual:</label><br>
-                        <input type="number" id="income" name="income"><br>
-                        <label for="water">Agua:</label><br>
-                        <input type="number" id="water" name="water"><br>
-                        <label for="food">Comida:</label><br>
-                        <input type="number" id="food" name="food"><br>
-                        <label for="electricity">Electricidad:</label><br>
-                        <input type="number" id="electricity" name="electricity"><br>
-                        <label for="mortgage">Hipoteca:</label><br>
-                        <input type="number" id="mortgage" name="mortgage"><br>
-                        <label for="parking">Parking:</label><br>
-                        <input type="number" id="parking" name="parking"><br>
-                        <label for="car">Coche:</label><br>
-                        <input type="number" id="car" name="car"><br>
-                        <label for="garbage">Basura:</label><br>
-                        <input type="number" id="garbage" name="garbage"><br>
-                        <button id="submit-btn">Calcular</button>
-                        <button id="clear-btn">Borrar</button>
-                    </div>
-                    <div>
-                        <canvas id="chart" width="500" height="300"></canvas>
-                    </div>
 
-                </main>
+                    <main>
+                        <div>
+                            <label for="income">Ingreso Mensual:</label><br>
+                            <input type="number" id="income" name="income"><br>
+                            <label for="water">Agua:</label><br>
+                            <input type="number" id="water" name="water"><br>
+                            <label for="food">Comida:</label><br>
+                            <input type="number" id="food" name="food"><br>
+                            <label for="electricity">Electricidad:</label><br>
+                            <input type="number" id="electricity" name="electricity"><br>
+                            <label for="mortgage">Hipoteca:</label><br>
+                            <input type="number" id="mortgage" name="mortgage"><br>
+                            <label for="parking">Parking:</label><br>
+                            <input type="number" id="parking" name="parking"><br>
+                            <label for="car">Coche:</label><br>
+                            <input type="number" id="car" name="car"><br>
+                            <label for="garbage">Basura:</label><br>
+                            <input type="number" id="garbage" name="garbage"><br>
+                            <button id="submit-btn">Calcular</button>
+                            <button id="clear-btn">Borrar</button>
+                        </div>
+                        <div>
+                            <canvas id="chart" width="500" height="300"></canvas>
+                        </div>
+
+                    </main>
                 <div class="fondoVideos">
                     <div class="row">
                         <div class="videos">
@@ -236,6 +236,14 @@
                     const car = savedCar ? parseFloat(savedCar) : 0;
                     const garbage = savedGarbage ? parseFloat(savedGarbage) : 0;
 
+                    const data = {
+                        labels: ["Ingresos", "Agua", "Comida", "Electricidad", "Hipoteca", "Parking", "Coche", "Basura", "Ahorros"],
+                        datasets: [{
+                                data: [income, water, food, electricity, mortgage, parking, car, garbage, income - water - food - electricity - mortgage - parking - car - garbage],
+                                backgroundColor: ["rgba(35, 255, 0)", "rgba(0, 255, 212)", "rgba(255, 176, 0)", "rgba(0, 36, 255)", "rgba(255, 243, 0)", "rgba(163, 163, 163)", "rgba(255, 0, 165)", "rgba(0, 183, 91)", "rgba(255, 0, 0)"]
+                            }]
+                    };
+
                     const options = {
                         legend: {
                             labels: {
@@ -257,8 +265,25 @@
                             bodyFontColor: 'white'
                         }
                     };
+
+                    myChart = new Chart(chartCtx, {
+                        type: "pie",
+                        data: data,
+                        options: options
+                    });
+
+                    // Ciclo for para mostrar valores en el gráfico
+                    for (let i = 0; i < data.datasets[0].data.length; i++) {
+                        if (data.datasets[0].data[i] > 0) {
+                            let legendItem = myChart.legend.legendItems[i];
+                            //legendItem.text += " (" + data.datasets[0].data[i].toFixed(2) + "€)";
+                        }
+                    }
                 }
             };
+
+
+
         </script>
 
 
