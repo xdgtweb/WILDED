@@ -33,17 +33,16 @@
                     <article>
                         <h2>Presupuesto Personal</h2>
                         <h3>
-                            Esta página permite al usuario ingresar sus gastos 
-                            mensuales y muestra un gráfico interactivo de 
-                            pastel con los porcentajes de gastos en diferentes 
-                            categorías, como ingresos, agua, comida, electricidad, 
-                            hipoteca, estacionamiento, coche y basura. Los 
-                            usuarios pueden borrar y actualizar los datos, que 
-                            se almacenan localmente para que persistan entre las 
-                            visitas. El gráfico se actualiza automáticamente al 
-                            ingresar nuevos datos y darle al boton "Calcular", 
-                            si se quiere borrar el contenido de la grafica le 
-                            tienes que dar a el boton "Borrar".
+                            Esta página permite al usuario ingresar y visualizar 
+                            sus gastos mensuales mediante un gráfico de pastel 
+                            interactivo que muestra los porcentajes en diferentes 
+                            categorías como ingresos, agua, comida, electricidad, 
+                            hipoteca, estacionamiento, coche y basura. Los datos 
+                            pueden ser actualizados y borrados por el usuario, y 
+                            se almacenan localmente para su persistencia. 
+                            La grafica se actualiza automáticamente al ingresar 
+                            nuevos datos y se puede borrar con el botón 
+                            correspondiente.
                         </h3>
                     </article>
                 </aside>
@@ -69,9 +68,12 @@
                             <button id="submit-btn">Calcular</button>
                             <button id="clear-btn">Borrar</button>
                         </div>
+                        
                         <div>
                             <canvas id="chart" width="500" height="300"></canvas>
+                            
                         </div>
+                        <div class="logoCentro"></div>
 
                     </main>
                 <div class="fondoVideos">
@@ -182,7 +184,7 @@
                     }
 
                     myChart = new Chart(chartCtx, {
-                        type: "pie",
+                        type: "doughnut",
                         data: data,
                         options: options
                     });
@@ -280,7 +282,7 @@
                     };
 
                     myChart = new Chart(chartCtx, {
-                        type: "pie",
+                        type: "doughnut",
                         data: data,
                         options: options
                     });
