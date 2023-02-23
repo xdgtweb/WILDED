@@ -636,6 +636,17 @@ canvas
         right: 0px;
         top: -163px;
     }
+
+    .caja form
+    {
+        background-color: transparent;
+        box-shadow: 0px 0px 0px 0px transparent;
+        height: 0px;
+        position: relative;
+        top: -9px;
+        right: 19px;
+    }
+    
 }
 
 @font-face {
