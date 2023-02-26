@@ -15,7 +15,7 @@
             <div class="fondoHeader">
                 <div class="row">
                     <header>
-                        <a class="logoLabel" href="index.html">
+                        <a class="logoLabel" href="index.php.html">
                             <div id="logo"><img src="../imagenes/ancla/1.1.png" alt="alt"/></div>
                             <label>WILDED</label>
                         </a>

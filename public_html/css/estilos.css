@@ -98,13 +98,13 @@ nav a .cajaImg
 
 nav a:nth-child(1) .cajaImg
 {
-    background-image: url(../imagenes/ancla/grupoAzul.png);
+    background-image: url(../imagenes/ancla/loginAzul.png);
     transition: background-image 0.3s;
     transition-delay: 0.1s;
 }
 nav a:nth-child(2) .cajaImg
 {
-    background-image: url(../imagenes/ancla/productosAzul.png);
+    background-image: url(../imagenes/ancla/grupoAzul.png);
     transition: background-image 0.3s;
     transition-delay: 0.1s;
 }
@@ -116,13 +116,13 @@ nav a:nth-child(3) .cajaImg
 }
 nav a:nth-child(1):hover .cajaImg
 {
-    background-image: url(../imagenes/ancla/grupoClaro.png);
+    background-image: url(../imagenes/ancla/loginBlanco.png);
     transition: background-image 0.3s;
     transition-delay: 0s;
 }
 nav a:nth-child(2):hover .cajaImg
 {
-    background-image: url(../imagenes/ancla/productosClaro.png);
+    background-image: url(../imagenes/ancla/grupoClaro.png);
     transition: background-image 0.3s;
     transition-delay: 0s;
 }
@@ -318,6 +318,7 @@ main #clear-btn
     margin: 10px;
     transition: transform 0.3s;
     border-radius: 10px;
+    box-shadow: 0 0 30px #333333;
 }
 
 .caja h2
@@ -398,6 +399,8 @@ a .caja
 {
     border-left: 4px black solid;
     border-top: 4px black solid;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
 }
 
 a:nth-child(1) .caja

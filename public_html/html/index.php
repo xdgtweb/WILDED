@@ -1,3 +1,8 @@
+<?php
+
+require 'config.php';
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,12 +19,13 @@
             <div class="fondoHeader">
                 <div class="row">
                     <header>
-                        <a class="logoLabel" href="index.html">
+                        <a class="logoLabel" href="index.php">
                             <div id="logo"><img src="../imagenes/ancla/1.1.png" alt="alt"/></div>
                             <label>WILDED</label>
                         </a>
                         <nav class="col-md-4">
-                            <a href="grupo.html"><div class="cajaImg"></div></a>
+                            <a href="login.php"><div class="cajaImg"></div></a>
+                            <a href="grupo.php"><div class="cajaImg"></div></a>
                             <a href="#"><div class="cajaImg"></div></a>
                             <a href="mailto:wildedcompany@gmail.com"><div class="cajaImg"></div></a>
                         </nav>
@@ -56,10 +62,10 @@
 
                 <main class="col-md-8">
                     <div class="contenedor">
-                        <a href="PresupuestoPersonal.html">  <!-- https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif -->
+                        <a href="PresupuestoPersonal.php">  <!-- https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif -->
                             <div class="caja">
                                 <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">-->
-                                <form action="PresupuestoPersonal.html">    
+                                <form action="PresupuestoPersonal.php">    
                                     <!--<input type="hidden" name="cmd" value="_s-xclick">
                                     <input type="hidden" name="hosted_button_id" value="UE39DNY5RGU5J">
                                     <input type="hidden" src="" border="0" name="submit" alt="">-->
@@ -73,10 +79,10 @@
                             </div>
 
                         </a>
-                        <a href="GanarDienroConProductos.html">
+                        <a href="GanarDienroConProductos.php">
                             <div class="caja">
                                 <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">-->
-                                <form action="GanarDienroConProductos.html">
+                                <form action="GanarDienroConProductos.php">
                                     <!--<input type="hidden" name="cmd" value="_s-xclick">
                                     <input type="hidden" name="hosted_button_id" value="FX4ED4JVKGUWW">
                                     <input type="image" src="" border="0" name="submit" alt="">-->
@@ -91,10 +97,10 @@
                             </div>
                         </a>
 
-                        <a href="RentabilidadFinanciera.html">
+                        <a href="RentabilidadFinanciera.php">
                             <div class="caja">
                                 <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">-->
-                                <form action="RentabilidadFinanciera.html">
+                                <form action="RentabilidadFinanciera.php">
                                     <!--<input type="hidden" name="cmd" value="_s-xclick">
                                     <input type="hidden" name="hosted_button_id" value="FX4ED4JVKGUWW">
                                     <input type="image" src="" border="0" name="submit" alt="">-->
@@ -109,30 +115,30 @@
                             </div>
                         </a>
 
+                    </div>
+                </main>
+
+
             </div>
-        </main>
+        </div>
 
+        <div class="fondoFooter">
 
-    </div>
-</div>
-
-<div class="fondoFooter">
-
-    <div class="row">
-        <footer class="col-12">
-            <div class="col-md-6">
-                <ul class="redesSociales">
-                    <li><a href="#"><div class="cajaImg"></div></a></li>
-                    <li><a href="#"><div class="cajaImg"></div></a></li>
-                    <li><a href="#"><div class="cajaImg"></div></a></li>
-                </ul>
+            <div class="row">
+                <footer class="col-12">
+                    <div class="col-md-6">
+                        <ul class="redesSociales">
+                            <li><a href="#"><div class="cajaImg"></div></a></li>
+                            <li><a href="#"><div class="cajaImg"></div></a></li>
+                            <li><a href="#"><div class="cajaImg"></div></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p>Wilded todos los derechos reservados © 2023</p>
+                    </div>
+                </footer>
             </div>
-            <div class="col-12">
-                <p>Wilded todos los derechos reservados © 2023</p>
-            </div>
-        </footer>
-    </div>
-</div>
+        </div>
 
-</body>
+    </body>
 </html>
